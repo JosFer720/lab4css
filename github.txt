@@ -1,0 +1,2 @@
+https://github.com/JosFer720/lab4css
+En la imagen de referencia los fantasmas se movian, por eso los deje asi

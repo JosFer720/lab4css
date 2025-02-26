@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Escena Luna y Fantasmas</title>
+    <style>
+    body {
+        margin: 0;
+        background-color: #1a1a1a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+    .wrapper {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    .ghost-container {
+        position: relative;
+        width: 58px;
+        height: 112px;
+    }
+    .ghost-container > .ghost {
+        display: block;
+    }
+    .ghost {
+        width: 58px;
+        height: 96px;
+        background: #fff;
+        position: relative;
+        border-top-left-radius: 29px;
+        border-top-right-radius: 29px;
+    }
+    .ghost::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 8px);
+        height: 1.6px;
+        background: transparent;
+        left: 4px;
+        top: 0;
+    }
+    .ghost::after {
+        content: "";
+        position: absolute;
+        width: calc(100% - 8px);
+        height: 1.6px;
+        background: transparent;
+        left: 6px;
+        bottom: 0;
+    }
+    .eye {
+        position: absolute;
+        top: 22px;
+        width: 7px;
+        height: 7px;
+        background: #000;
+        border-radius: 50%;
+    }
+    .eye.left {
+        left: 18px;
+    }
+    .eye.right {
+        left: 32px;
+    }
+    .mouth {
+        position: absolute;
+        top: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16px;
+        height: 16px;
+        background: #000;
+        border-radius: 50%;
+    }
+    .lumps {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 58px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .lump {
+        width: 19.5px;
+        height: 16px;
+        background: #fff;
+        border-radius: 0 0 50% 50%;
+    }
+    .inverted .lumps {
+        top: 0;
+        bottom: auto;
+    }
+    .inverted .lump {
+        border-radius: 50% 50% 0 0;
+    }
+    .inverted .ghost {
+        position: absolute;
+        bottom: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 29px;
+        border-bottom-right-radius: 29px;
+    }
+    .inverted .eye {
+        top: auto;
+        bottom: 22px;
+    }
+    .inverted .mouth {
+        top: auto;
+        bottom: 36px;
+    }
+    .moon {
+        width: 250px;
+        height: 250px;
+        background-color: #d9d9d9;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+    .crater {
+        position: absolute;
+        background-color: #b0b0b0;
+        border-radius: 50%;
+        border: 2px solid #d9d9d9;
+    }
+    .crater-large {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .crater-medium1 {
+        width: 35px;
+        height: 35px;
+        top: 40px;
+        left: 60px;
+    }
+    .crater-medium2 {
+        width: 40px;
+        height: 40px;
+        top: 60px;
+        right: 50px;
+    }
+    .crater-small {
+        width: 15px;
+        height: 15px;
+    }
+    .crater-small1 {
+        top: 20px;
+        left: 145px;
+    }
+    .crater-small2 {
+        top: 115px;
+        left: 40px;
+    }
+    .crater-small3 {
+        top: 120px;
+        right: 45px;
+    }
+    .crater-small4 {
+        bottom: 70px;
+        right: 40px;
+    }
+    .crater-small5 {
+        bottom: 95px;
+        left: 60px;
+    }
+    .crater-small6 {
+        top: 120px;
+        left: 120px;
+    }
+    </style>
+</head>
+<body>
+    <section class="wrapper">
+    <section class="ghost-container inverted">
+        <section class="lumps">
+        <span class="lump"></span>
+        <span class="lump"></span>
+        <span class="lump"></span>
+        </section>
+        <section class="ghost">
+        <span class="eye left"></span>
+        <span class="eye right"></span>
+        <span class="mouth"></span>
+        </section>
+    </section>
+    <section class="moon">
+        <article class="crater crater-large"></article>
+        <article class="crater crater-medium1"></article>
+        <article class="crater crater-medium2"></article>
+        <article class="crater crater-small crater-small1"></article>
+        <article class="crater crater-small crater-small2"></article>
+        <article class="crater crater-small crater-small3"></article>
+        <article class="crater crater-small crater-small4"></article>
+        <article class="crater crater-small crater-small5"></article>
+        <article class="crater crater-small crater-small6"></article>
+    </section>
+    <section class="ghost-container">
+        <section class="ghost">
+        <span class="eye left"></span>
+        <span class="eye right"></span>
+        <span class="mouth"></span>
+        </section>
+        <section class="lumps">
+        <span class="lump"></span>
+        <span class="lump"></span>
+        <span class="lump"></span>
+        </section>
+    </section>
+    </section>
+</body>
+</html>
+
